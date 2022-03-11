@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>11 폼 엘리먼트</title>
+</head>
+<body>
+	<form action="">
+		<fieldset>
+			<legend>개인정보</legend>
+			<label for="name">이름</label>
+			<input type="text" id="name" name="name" required><br>	<!-- required: 입력하지않으면 전송안된다. -->
+			
+			<label for="pwd">패스워드</label>
+			<input type="password" id="pwd" name="pwd"><br>
+			
+			<label for="birthday">생년월일</label>
+			<input type="date" id="birthday" name="birthday"><br>
+			
+			<label for="birthdaytime">생년월일(시간포함)</label>
+			<input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+			
+			<label for="email" >이메일</label>								<!-- disabled: 수정되면 안되는 값 (차이점 disabled는 입력한 항목이 빠져서 전송) -->
+			<input type="email" id="email" name="email" readonly><br>		<!-- readonly: 수정되면 안되는 값 -->
+			
+			<label for="file">파일첨부</label>
+			<input type="file" id="file" name="file"><br>
+			
+			<label for="hidden">숨겨진항목</label>
+			<input type="hidden" name="hidden" value="1234"><br>
+			
+			<label for="month">생년월일</label>
+			<input type="month" id="month" name="month"><br>
+			
+			<label for="quantity">수량</label>
+			<input type="number" id="quantity" name="quantity" min="1" max="5"><br>
+			
+			<label for="vol">범위</label>
+			<input type="range" id="vol" name="vol" min="0" max="50"><br>
+			
+			<label for="search">검색</label>
+			<input type="search" id="search" name="search"><br>
+			
+			<label for="phone">전화번호</label>
+			<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>	<!-- 서버에 전송하기 전에 패턴에 맞는지 확인한다. -->
+		
+			<label for="homepage">홈페이지</label>
+			<input type="url" id="homepage" name="homepage"><br>	
+		</fieldset>
+		<br><br>
+		<label for="car">자동차(단일선택)</label>
+		<select id="car" name="car">	<!-- select는 선택창 (option태그써서 범위지정) -->
+			<option value="1">현대</option>
+			<option value="2">기아</option>
+			<option value="3" selected>쉐보레</option>
+		</select>
+		<br><br>
+		
+		<label for="car2">자동차(다중선택)</label>
+		<select id="car2" name="car2" multiple>
+			<option value="1">현대</option>
+			<option value="2">기아</option>
+			<option value="3">쌍용</option>
+			<option value="4">르노</option>
+			<option value="5">쉐보레</option>
+		</select>
+		<br><br>
+		
+		<label for="message">텍스트 여러줄 입력</label>
+		<textarea rows="10" cols="30">안녕하세요? 제 이름은 홍길동 입니다.</textarea>
+		<br><br>
+		
+		<input list="과일">
+		<datalist id="과일">
+			<option value="사과">
+			<option value="딸기">
+			<option value="포도">
+			<option value="샤인머스캣">
+			<option value="귤">
+		</datalist>
+		<br><br>
+		
+		<label for="male">남자</label>
+		<input type="radio" id="male" name="gender" value="male">		<!-- name이 같아야한다. -->
+		<label for="female">여자</label>
+		<input type="radio" id="female" name="gender" value="female">
+		<br><br>
+		
+		<label for="vehicle1">자전거</label>
+		<input type="checkbox" id="vehicle1" name="vechle" value="bike">
+		<label for="vehicle2">자동차</label>
+		<input type="checkbox" id="vehicle2" name="vechle" value="car">
+		<label for="vehicle3">보트</label>
+		<input type="checkbox" id="vehicle3" name="vechle" value="boat">
+		<br><br>
+		
+		<input type="submit" value="전송하기">
+		<input type="reset" value="취소하기">		<!-- reset: 폼 안에있는 모든 입력한 항목이 사라진다. -->
+		
+		
+	</form>
+</body>
+</html>
